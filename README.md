@@ -1,9 +1,11 @@
 # Covid 19
 
-  Em construção.
+  
 
   > Iniciando os estudos sobre COVID-19 (Brasil)
 
+  _Em construção._
+  
 <br><br>
 
 Base de Dados:
