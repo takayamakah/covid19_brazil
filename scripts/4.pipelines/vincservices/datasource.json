@@ -1,0 +1,17 @@
+{
+    "name": "datasource",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "FileServer",
+        "typeProperties": {
+            "host": "\\\\personalkah\\GitHub\\",
+            "userId": "karinetakayama",
+            "encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5NzMzNzEzZC1hYzkxLTQ0ZTMtYTU5Mi0yNWYyZjBmYzgxZTYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+        },
+        "connectVia": {
+            "referenceName": "takayamabi-irt-covid19",
+            "type": "IntegrationRuntimeReference"
+        }
+    }
+}

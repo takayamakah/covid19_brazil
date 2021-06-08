@@ -1,0 +1,6 @@
+{
+    "name": "takayamabi-irt-covid19",
+    "properties": {
+        "type": "SelfHosted"
+    }
+}

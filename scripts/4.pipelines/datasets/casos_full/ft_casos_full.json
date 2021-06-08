@@ -1,0 +1,104 @@
+{
+    "name": "ft_casos_full",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "dataset",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "casos_full"
+        },
+        "annotations": [],
+        "type": "SqlServerTable",
+        "schema": [
+            {
+                "name": "id_casos_full",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "city_ibge_code",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "date",
+                "type": "datetime",
+                "precision": 23,
+                "scale": 3
+            },
+            {
+                "name": "epidemiological_week",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "estimated_population",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "estimated_population_2019",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "is_last",
+                "type": "varchar"
+            },
+            {
+                "name": "is_repeated",
+                "type": "varchar"
+            },
+            {
+                "name": "last_available_confirmed",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "last_available_confirmed_per_100k_inhabitants",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "last_available_date",
+                "type": "datetime",
+                "precision": 23,
+                "scale": 3
+            },
+            {
+                "name": "last_available_death_rate",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "last_available_deaths",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "order_for_place",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "state",
+                "type": "varchar"
+            },
+            {
+                "name": "new_confirmed",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "new_deaths",
+                "type": "int",
+                "precision": 10
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "ft_casos_full_ufs"
+        }
+    }
+}

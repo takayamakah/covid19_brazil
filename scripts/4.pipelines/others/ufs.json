@@ -1,0 +1,29 @@
+{
+    "name": "ufs",
+    "properties": {
+        "description": "ETL tabela dimensão de estados (UFS)\ntabela dimensão:\nid_uf\nuf\ndescription\n",
+        "activities": [
+            {
+                "name": "sp_ufs_stg_dw",
+                "type": "SqlServerStoredProcedure",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "storedProcedureName": "[dbo].[sp_ufs_stg_dw]"
+                },
+                "linkedServiceName": {
+                    "referenceName": "dataset",
+                    "type": "LinkedServiceReference"
+                }
+            }
+        ],
+        "annotations": []
+    }
+}

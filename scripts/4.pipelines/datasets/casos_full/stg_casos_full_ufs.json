@@ -1,0 +1,88 @@
+{
+    "name": "stg_casos_full_ufs",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "dataset",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "casos_full"
+        },
+        "annotations": [],
+        "type": "SqlServerTable",
+        "schema": [
+            {
+                "name": "city_ibge_code",
+                "type": "nvarchar"
+            },
+            {
+                "name": "date",
+                "type": "nvarchar"
+            },
+            {
+                "name": "epidemiological_week",
+                "type": "nvarchar"
+            },
+            {
+                "name": "estimated_population",
+                "type": "nvarchar"
+            },
+            {
+                "name": "estimated_population_2019",
+                "type": "nvarchar"
+            },
+            {
+                "name": "is_last",
+                "type": "nvarchar"
+            },
+            {
+                "name": "is_repeated",
+                "type": "nvarchar"
+            },
+            {
+                "name": "last_available_confirmed",
+                "type": "nvarchar"
+            },
+            {
+                "name": "last_available_confirmed_per_100k_inhabitants",
+                "type": "nvarchar"
+            },
+            {
+                "name": "last_available_date",
+                "type": "nvarchar"
+            },
+            {
+                "name": "last_available_death_rate",
+                "type": "nvarchar"
+            },
+            {
+                "name": "last_available_deaths",
+                "type": "nvarchar"
+            },
+            {
+                "name": "order_for_place",
+                "type": "nvarchar"
+            },
+            {
+                "name": "place_type",
+                "type": "nvarchar"
+            },
+            {
+                "name": "state",
+                "type": "nvarchar"
+            },
+            {
+                "name": "new_confirmed",
+                "type": "nvarchar"
+            },
+            {
+                "name": "new_deaths",
+                "type": "nvarchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "stg_casos_full_ufs"
+        }
+    }
+}

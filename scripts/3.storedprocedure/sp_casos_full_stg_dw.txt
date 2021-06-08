@@ -1,0 +1,29 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[sp_casos_full_stg_dw]
+AS
+    --Verifica se existe tabela de Casos Full. Se sim, excluí dados da tabela
+    IF EXISTS (SELECT o.name FROM sys.all_objects o WHERE o.name = 'ft_casos_full')
+        TRUNCATE TABLE [COVID19].[dbo].[ft_casos_full]
+
+    --Insere Dados de stg_casos_full_ufs em ft_casos_full
+    INSERT INTO [COVID19].[dbo].[ft_casos_full]
+
+        SELECT cast(cast(U.[city_ibge_code] as float) as integer) 
+            ,(SELECT D.[id_date] FROM [COVID19].[dbo].[dm_date] D WHERE D.[date] = U.[date])
+            ,cast(cast(U.[estimated_population] as float) as integer) 
+            ,cast(cast(U.[estimated_population_2019] as float) as integer) 
+            ,iif(U.[is_last] = 'True', 1, 0) 
+            ,iif(U.[is_repeated] = 'True', 1, 0) 
+            ,cast(cast(U.[last_available_confirmed] as float) as integer) 
+            ,cast(U.[last_available_confirmed_per_100k_inhabitants] as float) 
+            ,(SELECT D.[id_date] FROM [COVID19].[dbo].[dm_date] D WHERE D.[date] = U.[last_available_date]) 
+            ,cast(U.[last_available_death_rate] as float) 
+            ,cast(cast(U.[last_available_deaths] as float) as integer) 
+            ,cast(cast(U.[order_for_place] as float) as integer)      
+            ,cast(cast(U.[new_confirmed] as float) as integer) 
+            ,cast(cast(U.[new_deaths] as float) as integer) 
+        FROM [COVID19].[dbo].[stg_casos_full_ufs] U
+GO

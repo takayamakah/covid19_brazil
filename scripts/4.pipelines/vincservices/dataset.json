@@ -1,0 +1,17 @@
+{
+    "name": "dataset",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "SqlServer",
+        "typeProperties": {
+            "connectionString": "integrated security=True;data source=localhost\\SQLEXPRESS;initial catalog=COVID19",
+            "userName": "karinetakayama",
+            "encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxMjVjMjE1ZS0yM2FkLTRiOTQtYmM1ZC1kODgyYjFhYmZkMjUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+        },
+        "connectVia": {
+            "referenceName": "takayamabi-irt-covid19",
+            "type": "IntegrationRuntimeReference"
+        }
+    }
+}

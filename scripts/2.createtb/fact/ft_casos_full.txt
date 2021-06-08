@@ -1,0 +1,27 @@
+drop table ft_casos_full
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ft_casos_full](
+	[id_casos_full] [int] IDENTITY(1,1) NOT NULL,
+	[id_uf] [int] NOT NULL,
+	[id_date] [int] NOT NULL,
+	[estimated_population] [int] NULL,
+	[estimated_population_2019] [int] NULL,
+	[is_last] [bit] NULL,
+	[is_repeated] [bit] NULL,
+	[last_available_confirmed] [int] NULL,
+	[last_available_confirmed_per_100k_inhabitants] [float] NULL,
+	[last_available_date] [int] NULL,
+	[last_available_death_rate] [float] NULL,
+	[last_available_deaths] [int] NULL,
+	[order_for_place] [int] NULL,
+	[new_confirmed] [int] NULL,
+	[new_deaths] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id_casos_full] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO

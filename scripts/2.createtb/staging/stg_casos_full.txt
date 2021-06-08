@@ -1,0 +1,25 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[stg_casos_full_ufs](
+	[city_ibge_code] [nvarchar](max) NULL,
+	[date] [nvarchar](max) NULL,
+	[epidemiological_week] [nvarchar](max) NULL,
+	[estimated_population] [nvarchar](max) NULL,
+	[estimated_population_2019] [nvarchar](max) NULL,
+	[is_last] [nvarchar](max) NULL,
+	[is_repeated] [nvarchar](max) NULL,
+	[last_available_confirmed] [nvarchar](max) NULL,
+	[last_available_confirmed_per_100k_inhabitants] [nvarchar](max) NULL,
+	[last_available_date] [nvarchar](max) NULL,
+	[last_available_death_rate] [nvarchar](max) NULL,
+	[last_available_deaths] [nvarchar](max) NULL,
+	[order_for_place] [nvarchar](max) NULL,
+	[place_type] [nvarchar](max) NULL,
+	[state] [nvarchar](max) NULL,
+	[new_confirmed] [nvarchar](max) NULL,
+	[new_deaths] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
